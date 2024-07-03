@@ -1,0 +1,119 @@
+
+* {
+    padding: 0;
+    margin: 0;
+}
+body {
+    margin: 0;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(to right, rgba(255, 0, 0, 0.5), rgba(255, 255, 0, 0.5));
+    font-family: sans-serif;
+}
+
+main {
+    width: 400px;
+    height: max-content;
+    min-height: 400px;
+    background-color: #8f8f8f;
+    border-radius: 30px;
+    box-shadow: 0 35px 50px #a29d9d;
+    padding : 30px;
+    box-sizing: border-box;
+}
+main form {
+    border : 1px solid rgb(29, 6, 6);
+    display:flex;
+    justify-content: space-between;
+    border-radius: 30px;
+}
+
+main form input,
+main form button{
+    font-size: inherit;
+    border: none;
+    background-color: transparent;
+    padding: 10px;
+    outline: none;
+}
+main form i {
+    font-size:20px;
+    opacity: 0.5;
+}
+
+main .result {
+    padding: 30px;
+    text-align: center
+}
+main .result .name {
+    font-weight: bold;
+    font-size: 25px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+main .temperature img {
+    width: 178px;
+    filter: drop-shadow(0 20px 50px #000);
+}
+
+main .temperature figcaption {
+    font-size: 3em;
+}
+
+main .description {
+    padding: 10px 0 30px ;
+}
+
+main ul {
+    list-style-type: none;
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 25px;
+}
+
+main li{
+    color: #fff;
+    background-color: rgb(101, 83, 101);
+    border-radius: 15px;
+    padding: 20px 10px;
+    background-image: linear-gradient(
+        to bottom,transparent 60%,#000 90%
+    );
+    font-weight: bold;
+    font-size: small;
+}
+
+main li i {
+    font-size: 2em;
+    display: block!important;
+    margin : 30px 0;
+}
+
+
+main.error {
+    animation : errorEffect 0.3s linear 1;
+
+}
+
+@keyframes errorEffect {
+    0%{
+        transform: translate(10px,-13px);
+    }
+    25%{
+        transform: translate(-10px,13px);
+    }
+    50%{
+        transform: translate(13px,-14px);
+    }
+    75%{
+        transform: translate(-13px,-14px);
+    }
+    100%{
+        transform: translate(14px,12px);
+    }
+}
